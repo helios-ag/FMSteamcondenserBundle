@@ -1,0 +1,34 @@
+{% if not error %}
+    <div class="fm_steam_user_info">
+        <img src="{{ user.IconAvatarUrl }}" alt="{{ user.Nickname }}">
+        <span><a href="{{ user.BaseUrl }}">{{ user.Nickname }}</a></span>
+        {% if showGames %}
+            <div id="fm_steam_user_block">
+                <span>{% trans from 'FMSteamcondenserBundle' %}gameslist{% endtrans %}</span>
+                <ul>
+                    {% for game in user.Games %}
+                        <li>{{ game.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <span>{% trans from 'FMSteamcondenserBundle' %}userstatus{% endtrans %}:
+        {% if user.Online %}
+            {% trans from 'FMSteamcondenserBundle' %}online{% endtrans %}
+        {% else %}
+            {% trans from 'FMSteamcondenserBundle' %}offline{% endtrans %}
+        {% endif %}
+        </span>
+        <span>{% trans from 'FMSteamcondenserBundle' %}steamrating{% endtrans %}: {{ user.steamRating }}</span>
+        <span>{% trans from 'FMSteamcondenserBundle' %}tradestatus{% endtrans %}: {{ user.TradeBanState }}</span>
+        <span>{% trans from 'FMSteamcondenserBundle' %}VACstatus{% endtrans %}:
+            {% if user.isBanned %}
+                {% trans from 'FMSteamcondenserBundle' %}banned{% endtrans %}
+                    {% else %}
+                {% trans from 'FMSteamcondenserBundle' %}fine{% endtrans %}
+            {% endif %}
+        </span>
+    </div>
+{% else %}
+    {{ error }}
+{% endif %}

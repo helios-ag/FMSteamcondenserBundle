@@ -1,0 +1,26 @@
+{
+    "name": "helios-ag/fm-steamcondenser-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony SteamcondenserBundle",
+    "keywords": ["steam, webapi, symfony, steam-condenser"],
+    "homepage": "https://github.com/helios-ag/FMSteamcondenserBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Albert Ganiev",
+            "email": "helios.ag@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "koraktor/steam-condenser-php": "dev-master",
+        "symfony/twig-bundle": ">=2.0-dev,<2.3-dev"
+    },
+    "require-dev": {
+        "symfony/symfony": ">=2.0-dev,<2.3-dev"
+    },
+    "autoload": {
+        "psr-0": { "FM\\SteamcondenserBundle": "" }
+    },
+    "target-dir": "FM/SteamcondenserBundle"
+}

@@ -1,0 +1,18 @@
+{% if not error %}
+<div class="fm_steam_server_info">
+    <span>{{ server.ServerInfo.serverName }}</span>
+    {% if showPlayers %}
+        <div id="fm_steam_players_block">
+            <span>{% trans from 'FMSteamcondenserBundle' %}players{% endtrans %}</span>
+            <ul>
+            {% for player in server.getPlayers %}
+                <li>{{ player.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <span id="fm_steam_counter">{% trans from 'FMSteamcondenserBundle' %}numplayers{% endtrans %}: {{ server.ServerInfo.numberOfPlayers ~ '/' ~ server.ServerInfo.maxPlayers}}</span>
+</div>
+{% else %}
+{{ error }}
+{% endif %}
