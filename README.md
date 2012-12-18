@@ -102,7 +102,15 @@ php app/console steam:userinfo [username/steamID]
 
 Accept Steam ID (64 bit unique number) or Steam user name
 
-Show username and list of available games. Also shows
+Show username and list of available games. Also shows user current nickname and his online status.
+
+### Server List Command
+```bash
+php app/console steam:serverlist
+```
+
+Show list of defined servers via config.yml
+
 
 
 ##Services

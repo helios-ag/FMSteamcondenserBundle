@@ -2,7 +2,7 @@
     "name": "helios-ag/fm-steamcondenser-bundle",
     "type": "symfony-bundle",
     "description": "Symfony SteamcondenserBundle",
-    "keywords": ["steam, webapi, symfony, steam-condenser"],
+    "keywords": ["steam, webapi, symfony, steamcondenser"],
     "homepage": "https://github.com/helios-ag/FMSteamcondenserBundle",
     "license": "MIT",
     "authors": [
