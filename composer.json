@@ -12,12 +12,15 @@
         }
     ],
     "require": {
-        "php": ">=5.3.2",
-        "koraktor/steam-condenser-php": "dev-master",
-        "symfony/twig-bundle": ">=2.0-dev,<2.3-dev"
+        "php":                           ">=5.3.3",
+        "symfony/symfony":               "~2.4",
+        "sensio/framework-extra-bundle": "*@dev",
+        "symfony/twig-bundle":           "~2.0",
+        "koraktor/steam-condenser":      "dev-psr-0"
     },
-    "require-dev": {
-        "symfony/symfony": ">=2.0-dev,<2.3-dev"
+    "require-dev" : {
+        "matthiasnoback/symfony-config-test":  "0.*",
+        "matthiasnoback/symfony-dependency-injection-test": "0.*"
     },
     "autoload": {
         "psr-0": { "FM\\SteamcondenserBundle": "" }
